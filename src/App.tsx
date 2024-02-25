@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
+import AvatarEditor from 'react-avatar-editor'
+import Avatar from 'react-avatar';
+
 interface btr {
   batteryLevel: number;
 }
@@ -110,7 +113,7 @@ function App() {
     }
   };
 
-  const [image, setImage] = useState<string | null>(null);
+  const [image, setImage] = useState<any>(null);
 
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -143,6 +146,17 @@ function App() {
           <button onClick={() => changeSession(true, 'session', 'true')}>Add to session</button>
           <button onClick={() => changeSession(false, 'session', 'false')}>Remove from session</button>
         </div>
+        11111
+        <AvatarEditor
+            image={image}
+            width={250}
+            height={250}
+            border={50}
+            color={[255, 255, 255, 0.6]} // RGBA
+            scale={1.2}
+            rotate={0}
+        />
+        <Avatar googleId="118096717852922241760" size="100" round={true} />
         <div className="brdr">
           <input type="file" accept="image/*" onChange={handleImageChange} capture="user" />
           {image && (
