@@ -1,5 +1,12 @@
 .App {
-  text-align: center;
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background-image: url("https://cdn.fishki.net/upload/post/2019/08/14/3057384/tn/1c042f46bdd6cc56ed68d53dc2d8a890.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 
 .App-logo {
@@ -7,6 +14,21 @@
   pointer-events: none;
 }
 
+.brdr {
+  border-radius: 12px;
+  border: 1px solid #ff3c00;
+  padding: 8px;
+}
+
+.display {
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 40px;
+  grid-row-gap: 25px;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
